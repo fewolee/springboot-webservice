@@ -1,15 +1,18 @@
 package com.fewolee.book.springbootwebservice.domain.posts;
 
+import com.fewolee.book.springbootwebservice.domain.user.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Getter
-@NoArgsConstructor // 기본 생성자 생성 - public Posts(){}와 같은 효과
+@NoArgsConstructor
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,18 +20,20 @@ public class Posts {
     @Column(length = 500, nullable = false)
     private String title;
 
-    @Column(length = 500, nullable = false)
+    @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
 
     private String author;
 
     @Builder
-    public Posts(String title, String content, String author){
-
-        this.title =title;
+    public Posts(String title, String content, String author) {
+        this.title = title;
         this.content = content;
         this.author = author;
-
     }
 
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
