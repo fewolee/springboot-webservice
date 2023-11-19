@@ -1,10 +1,12 @@
 package com.fewolee.book.springbootwebservice.web;
 
 import com.fewolee.book.springbootwebservice.service.posts.PostsService;
+import com.fewolee.book.springbootwebservice.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @RequiredArgsConstructor
 @Controller
