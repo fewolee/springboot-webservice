@@ -1,12 +1,11 @@
 package com.fewolee.book.springbootwebservice.domain.posts;
 
-import com.fewolee.book.springbootwebservice.domain.user.BaseTimeEntity;
+import com.fewolee.book.springbootwebservice.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Getter
 @NoArgsConstructor

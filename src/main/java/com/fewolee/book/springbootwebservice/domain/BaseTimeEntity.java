@@ -1,4 +1,4 @@
-package com.fewolee.book.springbootwebservice.domain.user;
+package com.fewolee.book.springbootwebservice.domain;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
