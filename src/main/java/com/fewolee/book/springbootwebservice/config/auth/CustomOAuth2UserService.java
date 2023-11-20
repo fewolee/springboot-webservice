@@ -1,6 +1,9 @@
 package com.fewolee.book.springbootwebservice.config.auth;
 
+import com.fewolee.book.springbootwebservice.config.auth.dto.OAuthAttributes;
+import com.fewolee.book.springbootwebservice.config.auth.dto.SessionUser;
 import com.fewolee.book.springbootwebservice.domain.user.User;
+import com.fewolee.book.springbootwebservice.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;

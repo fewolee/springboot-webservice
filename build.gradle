@@ -28,6 +28,7 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	compileOnly 'org.springframework.boot:spring-boot-starter-mustache'
 	compileOnly 'org.springframework.boot:spring-boot-starter-oauth2-client'
+	compileOnly 'org.springframework.session:spring-session-jdbc'
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	runtimeOnly("com.h2database:h2")
@@ -36,6 +37,7 @@ dependencies {
 	testImplementation("org.junit.vintage:junit-vintage-engine"){
 		exclude group: "org.hamcrest", module: "hamcrest-core"
 	}
+	testCompileOnly "org.springframework.security:spring-security-test"
 
 }
 
